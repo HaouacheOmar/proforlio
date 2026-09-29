@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <meta name="description" content="Omar Haouache, software engineer: backend development, IT systems architecture and AI integration.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/person-lines-fill-svgrepo-com.svg">
     <link rel="manifest" href="assets/favicons/site.webmanifest">
     <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#a789d4">
 
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
 
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -33,31 +33,31 @@
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item ">
-                        <a href="#home" class="nav__link">
+                        <a href="#home" class="nav__link" aria-label="Home">
                             <i class='bx bx-home'></i>
                         </a>
                     </li>
 
                     <li class="nav__item ">
-                        <a href="#about" class="nav__link">
+                        <a href="#about" class="nav__link" aria-label="About">
                             <i class='bx bx-user'></i>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#skills" class="nav__link">
+                        <a href="#skills" class="nav__link" aria-label="Skills">
                             <i class='bx bx-book'></i>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#work" class="nav__link">
+                        <a href="#work" class="nav__link" aria-label="Work">
                             <i class='bx bx-briefcase-alt-2'></i>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#contact" class="nav__link">
+                        <a href="#contact" class="nav__link" aria-label="Contact">
                             <i class='bx bx-message-square-dots'></i>
                         </a>
                     </li>
@@ -65,7 +65,7 @@
             </div>
 
        
-            <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
+            <button type="button" class="change-theme" aria-label="Toggle light/dark theme"><i class='bx bx-moon' id="theme-button"></i></button>
 
         </nav>
     </header>
@@ -90,17 +90,17 @@
                 </div>
 
                 <div class="home__handle">
-                    <img src="assets/img/skills.jpeg" alt="" class="home__img">
+                    <img src="assets/img/skills.jpeg" alt="Omar" class="home__img" width="800" height="496" decoding="async">
                 </div>
 
                 <div class="home__social">
-                    <a href="#" target="_blank" class="home__social-link">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="home__social-link" aria-label="LinkedIn">
                         <i class='bx bxl-linkedin'></i>
                     </a>
-                    <a href="https://github.com/HaouacheOmar" target="_blank" class="home__social-link">
+                    <a href="https://github.com/HaouacheOmar" target="_blank" rel="noopener noreferrer" class="home__social-link" aria-label="GitHub">
                         <i class='bx bxl-github'></i>
                     </a>
-                    <a href="#" target="_blank" class="home__social-link">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="home__social-link" aria-label="Dribbble">
                         <i class='bx bxl-dribbble'></i>
                     </a>
                 </div>
@@ -117,7 +117,7 @@
             <h2 class="section__title">About Me</h2>
 
             <div class="about__container container grid">
-                <img src="assets/img/me.jpeg" alt="" class="about__img">
+                <img src="assets/img/me.jpeg" alt="Portrait of Omar" class="about__img" width="660" height="660" loading="lazy" decoding="async">
 
                 <div class="about__data">
                     <div class="about__info">
@@ -181,7 +181,7 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">Javascript</h3>
+                                    <h3 class="skills__name">JavaScript</h3>
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
@@ -266,7 +266,7 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">PostgresSQL</h3>
+                                    <h3 class="skills__name">PostgreSQL</h3>
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
@@ -327,6 +327,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
 
@@ -336,18 +337,15 @@
 
             <div class="services__container container grid">
                 <div class="services__card">
-                    <div class="serv">
-                        <h3 class="services__title">Robust Backend <br> Software Development</h3>
+                    <h3 class="services__title">Robust Backend Software Development</h3>
 
-                        <span class="services__button">
-                            See More <i class='bx bx-right-arrow services__icon'></i>
-                        </span>
-                    </div>
+                    <button type="button" class="services__button" data-modal="service-1">
+                        See More <i class='bx bx-right-arrow services__icon'></i>
+                    </button>
 
-
-                    <div class="services__modal">
+                    <div class="services__modal" id="service-1" role="dialog" aria-modal="true">
                         <div class="services__modal-content">
-                            <i class='bx bx-x services__modal-close'></i>
+                            <button type="button" class="services__modal-close" aria-label="Close"><i class='bx bx-x'></i></button>
 
                             <h3 class="services__modal-title">High-Performance Server Architecture & Custom Business Software</h3>
 
@@ -382,15 +380,15 @@
                 </div>
 
                 <div class="services__card">
-                    <h3 class="services__title">Modern Full-Stack <br>& Web Applications</h3>
+                    <h3 class="services__title">Modern Full-Stack & Web Applications</h3>
 
-                    <span class="services__button">
+                    <button type="button" class="services__button" data-modal="service-2">
                         See More <i class='bx bx-right-arrow services__icon'></i>
-                    </span>
+                    </button>
 
-                    <div class="services__modal">
+                    <div class="services__modal" id="service-2" role="dialog" aria-modal="true">
                         <div class="services__modal-content">
-                            <i class='bx bx-x services__modal-close'></i>
+                            <button type="button" class="services__modal-close" aria-label="Close"><i class='bx bx-x'></i></button>
 
                             <h3 class="services__modal-title">End-to-End Web Solutions from Interface to Server</h3>
 
@@ -427,15 +425,15 @@
                 </div>
 
                 <div class="services__card">
-                    <h3 class="services__title">Architecture, Modeling <br> & Database Design</h3>
+                    <h3 class="services__title">Architecture, Modeling & Database Design</h3>
 
-                    <span class="services__button">
+                    <button type="button" class="services__button" data-modal="service-3">
                         See More <i class='bx bx-right-arrow services__icon'></i>
-                    </span>
+                    </button>
 
-                    <div class="services__modal">
+                    <div class="services__modal" id="service-3" role="dialog" aria-modal="true">
                         <div class="services__modal-content">
-                            <i class='bx bx-x services__modal-close'></i>
+                            <button type="button" class="services__modal-close" aria-label="Close"><i class='bx bx-x'></i></button>
 
                             <h3 class="services__modal-title">Solid System Foundations & Business Data Modeling</h3>
 
@@ -470,15 +468,15 @@
                     </div>
                 </div>
                 <div class="services__card">
-                    <h3 class="services__title">Computer Vision <br> & AI Integration</h3>
+                    <h3 class="services__title">Computer Vision & AI Integration</h3>
 
-                    <span class="services__button">
+                    <button type="button" class="services__button" data-modal="service-4">
                         See More <i class='bx bx-right-arrow services__icon'></i>
-                    </span>
+                    </button>
 
-                    <div class="services__modal">
+                    <div class="services__modal" id="service-4" role="dialog" aria-modal="true">
                         <div class="services__modal-content">
-                            <i class='bx bx-x services__modal-close'></i>
+                            <button type="button" class="services__modal-close" aria-label="Close"><i class='bx bx-x'></i></button>
 
                             <h3 class="services__modal-title">Computer Vision & Video Stream Analytics</h3>
 
@@ -520,80 +518,328 @@
             <h2 class="section__title">Recent Works</h2>
 
             <div class="work__filters">
-                <span class="work__item active-work" data-filter='all'>All</span>
-                <span class=" work__item" data-filter='.intern'>Internship</span>
-                <span class=" work__item" data-filter='.sidework'>Side Work</span>
+                <button type="button" class="work__item active-work" data-filter="all">All</button>
+                <button type="button" class="work__item" data-filter=".intern">Internship</button>
+                <button type="button" class="work__item" data-filter=".sidework">Side Work</button>
             </div>
 
             <div class="work__container container grid">
                 <div class="work__card mix intern">
-                    <img src="assets/img/parking.jpeg" alt="" class="work__img">
+                    <img src="assets/img/parking.jpeg" alt="Smart Parking project screenshot" class="work__img" width="612" height="319" loading="lazy" decoding="async">
 
                     <h3 class="work__title">Smart Parking</h3>
 
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
+                    <button type="button" class="work__button" data-modal="project-parking" aria-label="Details of Smart Parking">
+                        Details <i class='bx bx-right-arrow work__icon'></i>
+                    </button>
                 </div>
 
                 <div class="work__card mix sidework">
-                    <img src="assets/img/agenda.jpeg" alt="" class="work__img">
+                    <img src="assets/img/agenda.jpeg" alt="Agenda project screenshot" class="work__img" width="408" height="490" loading="lazy" decoding="async">
 
                     <h3 class="work__title">Agenda</h3>
 
-                    <a href="https://github.com/HaouacheOmar/agenda" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
+                    <button type="button" class="work__button" data-modal="project-agenda" aria-label="Details of Agenda">
+                        Details <i class='bx bx-right-arrow work__icon'></i>
+                    </button>
                 </div>
                 <div class="work__card mix sidework">
-                    <img src="assets/img/familyTree.jpeg" alt="" class="work__img">
+                    <img src="assets/img/familyTree.jpeg" alt="Family Tree project screenshot" class="work__img" width="900" height="1244" loading="lazy" decoding="async">
 
                     <h3 class="work__title">Family Tree</h3>
 
-                    <a href="https://github.com/HaouacheOmar/bf-ops" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
+                    <button type="button" class="work__button" data-modal="project-familytree" aria-label="Details of Family Tree">
+                        Details <i class='bx bx-right-arrow work__icon'></i>
+                    </button>
                 </div>
                 <div class="work__card mix sidework">
-                    <img src="assets/img/hrpic.jpeg" alt="" class="work__img">
+                    <img src="assets/img/hrpic.jpeg" alt="HR Management BFOPS project screenshot" class="work__img" width="980" height="980" loading="lazy" decoding="async">
 
                     <h3 class="work__title">HR Management BFOPS</h3>
 
-                    <a href="https://github.com/HaouacheOmar/bf-ops" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
+                    <button type="button" class="work__button" data-modal="project-hr" aria-label="Details of HR Management BFOPS">
+                        Details <i class='bx bx-right-arrow work__icon'></i>
+                    </button>
                 </div>                                  
 
                 <div class="work__card mix intern">
-                    <img src="assets/img/walfare.jpeg" alt="" class="work__img">
+                    <img src="assets/img/walfare.jpeg" alt="Welfare management desktop app screenshot" class="work__img" width="350" height="350" loading="lazy" decoding="async">
 
-                    <h3 class="work__title">Desktop App Walfare Management</h3>
+                    <h3 class="work__title">Desktop App Welfare Management</h3>
 
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
+                    <button type="button" class="work__button" data-modal="project-welfare" aria-label="Details of Desktop App Welfare Management">
+                        Details <i class='bx bx-right-arrow work__icon'></i>
+                    </button>
                 </div>
                 <div class="work__card mix sidework">
-                    <img src="assets/img/access.jpeg" alt="" class="work__img">
+                    <img src="assets/img/access.jpeg" alt="Smart Access web app screenshot" class="work__img" width="800" height="800" loading="lazy" decoding="async">
 
                     <h3 class="work__title">Web App Smart Access</h3>
 
-                    <a href="https://github.com/HaouacheOmar/FRSYS" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
+                    <button type="button" class="work__button" data-modal="project-access" aria-label="Details of Web App Smart Access">
+                        Details <i class='bx bx-right-arrow work__icon'></i>
+                    </button>
                 </div>                
             </div>
+
+            <!-- Project dialogs (opened by the "Details" buttons) -->
+                <div class="services__modal" id="project-parking" role="dialog" aria-modal="true" aria-labelledby="project-parking-title">
+                    <div class="services__modal-content">
+                        <button type="button" class="services__modal-close" aria-label="Close"><i class='bx bx-x'></i></button>
+
+                        <h3 class="services__modal-title" id="project-parking-title">Smart Parking</h3>
+
+                        <p class="services__modal-description">
+                            A web platform that monitors a parking lot in real time. Camera feeds are analysed by a computer-vision model, and the results are shown on a web dashboard, with a module for an LCD display.
+                        </p>
+
+                        <ul class="services__modal-list">
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Computer vision:</b> image processing on camera feeds with TensorFlow/Keras and OpenCV.
+                                </p>
+                            </li>
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Real time:</b> Django Channels, Daphne and Redis stream updates over WebSockets.
+                                </p>
+                            </li>
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Backend:</b> REST API with JWT authentication on PostgreSQL, user accounts and a management dashboard.
+                                </p>
+                            </li>
+                        </ul>
+
+                        <ul class="project__tags">
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>TensorFlow</li>
+                            <li>OpenCV</li>
+                            <li>Redis</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+
+                        <a href="https://github.com/RyanRouchiche/SMART_PARKING" target="_blank" rel="noopener noreferrer" class="button project__link">
+                            View on GitHub <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="services__modal" id="project-agenda" role="dialog" aria-modal="true" aria-labelledby="project-agenda-title">
+                    <div class="services__modal-content">
+                        <button type="button" class="services__modal-close" aria-label="Close"><i class='bx bx-x'></i></button>
+
+                        <h3 class="services__modal-title" id="project-agenda-title">Agenda</h3>
+
+                        <p class="services__modal-description">
+                            A calendar and events manager. Users sign in, create events and organise them by category.
+                        </p>
+
+                        <ul class="services__modal-list">
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Backend:</b> Django REST Framework API split into authentication, category and event modules.
+                                </p>
+                            </li>
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Interface:</b> a separate UI project that talks to the API.
+                                </p>
+                            </li>
+                        </ul>
+
+                        <ul class="project__tags">
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>REST Framework</li>
+                        </ul>
+
+                        <a href="https://github.com/HaouacheOmar/agenda" target="_blank" rel="noopener noreferrer" class="button project__link">
+                            View on GitHub <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="services__modal" id="project-familytree" role="dialog" aria-modal="true" aria-labelledby="project-familytree-title">
+                    <div class="services__modal-content">
+                        <button type="button" class="services__modal-close" aria-label="Close"><i class='bx bx-x'></i></button>
+
+                        <h3 class="services__modal-title" id="project-familytree-title">Family Tree</h3>
+
+                        <p class="services__modal-description">
+                            An app to manage and visualise family relationships: add family members and see how they connect in an interactive tree.
+                        </p>
+
+                        <ul class="services__modal-list">
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Visualisation:</b> the tree is drawn interactively with D3 and react-d3-tree.
+                                </p>
+                            </li>
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Family data:</b> relatives and their relationships, with photo uploads.
+                                </p>
+                            </li>
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Birthdays:</b> a command lists today's birthdays, ready to plug into notifications.
+                                </p>
+                            </li>
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Delivery:</b> Django REST API with a React/Vite front end, packaged as a Windows desktop app with Electron.
+                                </p>
+                            </li>
+                        </ul>
+
+                        <ul class="project__tags">
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>REST Framework</li>
+                            <li>React</li>
+                            <li>D3</li>
+                            <li>Electron</li>
+                            <li>SQLite</li>
+                        </ul>
+
+                        <a href="https://github.com/HaouacheOmar/FamilyTree" target="_blank" rel="noopener noreferrer" class="button project__link">
+                            View on GitHub <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="services__modal" id="project-hr" role="dialog" aria-modal="true" aria-labelledby="project-hr-title">
+                    <div class="services__modal-content">
+                        <button type="button" class="services__modal-close" aria-label="Close"><i class='bx bx-x'></i></button>
+
+                        <h3 class="services__modal-title" id="project-hr-title">HR Management BFOPS</h3>
+
+                        <p class="services__modal-description">
+                            A personnel and HR management system built around units, ranks and yearly quotas. It covers the administrator's daily work, from setting up the organisation to tracking every staff movement.
+                        </p>
+
+                        <ul class="services__modal-list">
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Organisation:</b> companies, units, ranks, positions and yearly quotas.
+                                </p>
+                            </li>
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Personnel:</b> staff records, assignments, transfers with history and suggestions, gain and loss records.
+                                </p>
+                            </li>
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Statistics:</b> charts per job, unit and company, with spreadsheet (xlsx) support.
+                                </p>
+                            </li>
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Delivery:</b> admin and viewer roles with JWT login, an Arabic user guide, and one docker compose to run it all.
+                                </p>
+                            </li>
+                        </ul>
+
+                        <ul class="project__tags">
+                            <li>Django</li>
+                            <li>REST Framework</li>
+                            <li>PostgreSQL</li>
+                            <li>React</li>
+                            <li>TypeScript</li>
+                            <li>Material UI</li>
+                            <li>Docker</li>
+                        </ul>
+
+                        <a href="https://github.com/HaouacheOmar/bf-ops" target="_blank" rel="noopener noreferrer" class="button project__link">
+                            View on GitHub <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="services__modal" id="project-welfare" role="dialog" aria-modal="true" aria-labelledby="project-welfare-title">
+                    <div class="services__modal-content">
+                        <button type="button" class="services__modal-close" aria-label="Close"><i class='bx bx-x'></i></button>
+
+                        <h3 class="services__modal-title" id="project-welfare-title">Desktop App Welfare Management</h3>
+
+                        <p class="services__modal-description">
+                            A desktop application for managing welfare files and their follow-up, built during an internship.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="services__modal" id="project-access" role="dialog" aria-modal="true" aria-labelledby="project-access-title">
+                    <div class="services__modal-content">
+                        <button type="button" class="services__modal-close" aria-label="Close"><i class='bx bx-x'></i></button>
+
+                        <h3 class="services__modal-title" id="project-access-title">Web App Smart Access</h3>
+
+                        <p class="services__modal-description">
+                            A face-recognition system for smart access and surveillance, deployed across several PCs. Surveillance posts show live camera feeds, while a central administration post hosts the API, the database and the recognition model.
+                        </p>
+
+                        <ul class="services__modal-list">
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Recognition:</b> DeepFace behind a dedicated FastAPI model server.
+                                </p>
+                            </li>
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Backend:</b> Django API on PostgreSQL, with live updates over WebSockets.
+                                </p>
+                            </li>
+                            <li class="services__modal-item">
+                                <i class='bx bx-check-circle'></i>
+                                <p class="services__modal-info">
+                                    <b>Clients:</b> React app for each surveillance post, one-click startup scripts, user manuals in English and Arabic.
+                                </p>
+                            </li>
+                        </ul>
+
+                        <ul class="project__tags">
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>FastAPI</li>
+                            <li>DeepFace</li>
+                            <li>React</li>
+                            <li>PostgreSQL</li>
+                            <li>Docker</li>
+                        </ul>
+
+                        <a href="https://github.com/HaouacheOmar/FRSYS" target="_blank" rel="noopener noreferrer" class="button project__link">
+                            View on GitHub <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                </div>
         </section>
 
 
 
         <section class="contact section" id="contact">
-            <sapn class="section__subtitle">Get in touch</sapn>
-            <h3 class="section__title">Contact Me</h3>
+            <span class="section__subtitle">Get in touch</span>
+            <h2 class="section__title">Contact Me</h2>
 
 
             <div class="contact__container container grid">
-                <div class="conct">
                     <div class="contact__content">
                         <h3 class="contact__title contact__title-info">Talk to me</h3>
 
@@ -603,17 +849,17 @@
                                 <h3 class="contact__card-title">Email</h3>
                                 <span class="contact__card-data">omarabderahmane325@gmail.com</span>
 
-                                <a href="mailto:example@domain.com" target="_blank" class="contact__button">
+                                <a href="mailto:omarabderahmane325@gmail.com" class="contact__button">
                                     Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
                                 </a>
                             </div>
 
                             <div class="contact__card">
                                 <i class='bx bxl-whatsapp contact__card-icon'></i>
-                                <h3 class="contact__card-title">Whatsapp</h3>
-                                <span class="contact__card-data">553-36-75-37</span>
+                                <h3 class="contact__card-title">WhatsApp</h3>
+                                <span class="contact__card-data">+213 553 36 75 37</span>
 
-                                <a href="https://api.whatsapp.com/send?phone=+213553367537&text=Hey there!" target="_blank"
+                                <a href="https://wa.me/213553367537?text=Hey%20Omar!" target="_blank" rel="noopener noreferrer"
                                     class="contact__button">
                                     Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
                                 </a>
@@ -624,20 +870,23 @@
                     <div class="contact__content">
                         <h3 class="contact__title contact__title-form">Write Me your Message</h3>
 
-                        <form action="" class="contact__form">
+                        <form class="contact__form" id="contact-form">
+                            <input type="hidden" name="_subject" value="New message from your portfolio">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">Name</label>
-                                <input type="text" placeholder="Enter name" class="contact__form-input">
+                                <label for="contact-name" class="contact__form-tag">Name</label>
+                                <input type="text" id="contact-name" name="name" autocomplete="name" required placeholder="Enter name" class="contact__form-input">
                             </div>
 
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">Mail</label>
-                                <input type="text" placeholder="Enter email" class="contact__form-input">
+                                <label for="contact-email" class="contact__form-tag">Mail</label>
+                                <input type="email" id="contact-email" name="email" autocomplete="email" required placeholder="Enter email" class="contact__form-input">
                             </div>
 
                             <div class="contact__form-div contact__form-area">
-                                <label for="" class="contact__form-tag">Message</label>
-                                <textarea name="" id="" cols="30" rows="10" placeholder="Write your Message"
+                                <label for="contact-message" class="contact__form-tag">Message</label>
+                                <textarea name="message" id="contact-message" required cols="30" rows="10" placeholder="Write your Message"
                                     class="contact__form-input "></textarea>
                             </div>
 
@@ -645,10 +894,12 @@
                             <button class="button">
                                 Send Message
                             </button>
+
+                            <p class="contact__form-status" id="contact-status" role="status" aria-live="polite"></p>
                         </form>
 
                     </div>                   
-                </div>
+            </div>
         </section>
     </main>
 
@@ -677,17 +928,17 @@
 
             <ul class="footer__social">
                 <li class="footer__social-item">
-                    <a href="https://www.facebook.com/abderrahmane.haouache.247035/" target="_blank" class="footer__social-link">
+                    <a href="https://www.facebook.com/abderrahmane.haouache.247035/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook">
                         <i class='bx bxl-facebook footer__social-icon'></i>
                     </a>
                 </li>
                 <li class="footer__social-item">
-                    <a href="https://github.com/HaouacheOmar" target="_blank" class="footer__social-link">
+                    <a href="https://github.com/HaouacheOmar" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="GitHub">
                         <i class='bx bxl-github footer__social-icon'></i>
                     </a>
                 </li>
                 <li class="footer__social-item">
-                    <a href="#" target="_blank" class="footer__social-link">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="LinkedIn">
                         <i class='bx bxl-linkedin footer__social-icon'></i>
                     </a>
                 </li>
@@ -696,10 +947,7 @@
     </footer>
 
 
-    <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
 
     <script src="assets/js/mixitup.min.js"></script>
 

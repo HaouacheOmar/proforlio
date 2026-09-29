@@ -5,31 +5,39 @@ function scrollHeader() {
   if (this.scrollY >= 50) header.classList.add("scroll-header");
   else header.classList.remove("scroll-header");
 }
-window.addEventListener("scroll", scrollHeader);
+window.addEventListener("scroll", scrollHeader, { passive: true });
 
-/*=============== SERVICES MODAL ===============*/
-// Get the modal
+/*=============== MODALS (services + project details) ===============*/
+// A button with data-modal="<id>" opens the .services__modal with that id
 const modalViews = document.querySelectorAll(".services__modal"),
-  modalBtns = document.querySelectorAll(".services__button"),
+  modalBtns = document.querySelectorAll("[data-modal]"),
   modalClose = document.querySelectorAll(".services__modal-close");
 
-// When the user clicks on the button, open the modal
-let modal = function (modalClick) {
-  modalViews[modalClick].classList.add("active-modal");
-};
+let lastModalBtn = null;
 
-modalBtns.forEach((mb, i) => {
-  mb.addEventListener("click", () => {
-    modal(i);
-  });
-});
+function openModal(btn) {
+  const modal = document.getElementById(btn.dataset.modal);
+  lastModalBtn = btn;
+  modal.classList.add("active-modal");
+  modal.querySelector(".services__modal-close").focus();
+}
 
-modalClose.forEach((mc) => {
-  mc.addEventListener("click", () => {
-    modalViews.forEach((mv) => {
-      mv.classList.remove("active-modal");
-    });
-  });
+function closeModal() {
+  modalViews.forEach((mv) => mv.classList.remove("active-modal"));
+  if (lastModalBtn) lastModalBtn.focus();
+  lastModalBtn = null;
+}
+
+modalBtns.forEach((mb) => mb.addEventListener("click", () => openModal(mb)));
+modalClose.forEach((mc) => mc.addEventListener("click", closeModal));
+// Click on the dark backdrop (outside the content) closes
+modalViews.forEach((mv) =>
+  mv.addEventListener("click", (e) => {
+    if (e.target === mv) closeModal();
+  })
+);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && lastModalBtn) closeModal();
 });
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
@@ -59,29 +67,6 @@ workLinks.forEach((wl) => {
   });
 });
 
-/*=============== SWIPER TESTIMONIAL ===============*/
-
-let swiperTestimonial = new Swiper(".testimonial__container", {
-  spaceBetween: 24,
-  loop: true,
-  grabCursor: true,
-
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  breakpoints: {
-    576: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 48,
-    },
-  },
-});
-
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
 const sections = document.querySelectorAll("section[id]");
@@ -105,7 +90,7 @@ function scrollActive() {
     }
   });
 }
-window.addEventListener("scroll", scrollActive);
+window.addEventListener("scroll", scrollActive, { passive: true });
 
 /*=============== LIGHT DARK THEME ===============*/
 const themeButton = document.getElementById("theme-button");
@@ -134,7 +119,7 @@ if (selectedTheme) {
 }
 
 // Activate / deactivate the theme manually with the button
-themeButton.addEventListener("click", () => {
+themeButton.parentElement.addEventListener("click", () => {
   // Add or remove the light / icon theme
   document.body.classList.toggle(lightTheme);
   themeButton.classList.toggle(iconTheme);
@@ -143,12 +128,47 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
+/*=============== CONTACT FORM ===============*/
+const CONTACT_EMAIL = "omarabderahmane325@gmail.com";
+const contactForm = document.getElementById("contact-form"),
+  contactStatus = document.getElementById("contact-status");
+
+contactForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const btn = contactForm.querySelector("button");
+  const data = new FormData(contactForm);
+  btn.disabled = true;
+  contactStatus.textContent = "Sending...";
+  try {
+    // FormSubmit relays the message to CONTACT_EMAIL (first use needs a one-time activation email)
+    const res = await fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: data,
+    });
+    const json = await res.json();
+    if (!res.ok || String(json.success) !== "true") throw new Error(json.message);
+    contactForm.reset();
+    contactStatus.textContent = "Message sent, thank you!";
+  } catch {
+    // Relay down or not activated yet: fall back to the visitor's mail app
+    const subject = encodeURIComponent(`Portfolio message from ${data.get("name")}`);
+    const body = encodeURIComponent(`${data.get("message")}\n\n${data.get("name")} <${data.get("email")}>`);
+    contactStatus.textContent = "Could not send directly, opening your email app instead...";
+    location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  } finally {
+    btn.disabled = false;
+  }
+});
+
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 const sr = ScrollReveal({
   origin: "top",
   distance: "60px",
-  duration: 2500,
-  delay: 400,
+  duration: reduceMotion ? 0 : 2500,
+  delay: reduceMotion ? 0 : 400,
   reset: true,
 });
 
@@ -190,7 +210,7 @@ sr.reveal(`.skills__content`, {
   distance: "30px",
 });
 
-sr.reveal(`.services__title, services__button`, {
+sr.reveal(`.services__title`, {
   delay: 100,
   scale: 0.9,
   origin: "top",
@@ -198,13 +218,6 @@ sr.reveal(`.services__title, services__button`, {
 });
 
 sr.reveal(`.work__card`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "bottom",
-  distance: "30px",
-});
-
-sr.reveal(`.testimonial__container`, {
   delay: 100,
   scale: 0.9,
   origin: "bottom",
@@ -225,7 +238,7 @@ sr.reveal(`.contact__form, .contact__title-form`, {
   distance: "30px",
 });
 
-sr.reveal(`.footer, footer__container`, {
+sr.reveal(`.footer`, {
   delay: 100,
   scale: 0.9,
   origin: "bottom",
