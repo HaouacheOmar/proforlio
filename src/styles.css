@@ -648,6 +648,21 @@ body.light-theme {
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+  animation: work-card-in 0.4s ease-out;
+}
+
+/* Plays whenever a card mounts, i.e. on load and on each filter change */
+@keyframes work-card-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work__card {
+    animation: none;
+  }
 }
 
 .work__img {
@@ -673,6 +688,17 @@ body.light-theme {
   align-items: center;
   column-gap: 0.25rem;
   cursor: pointer;
+}
+
+.work__actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Demo button of a project whose demo URL is still empty */
+.work__button--soon {
+  opacity: 0.5;
+  cursor: default;
 }
 
 .work__button:hover .work__icon {
