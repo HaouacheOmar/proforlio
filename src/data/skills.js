@@ -1,33 +1,29 @@
-// "My Experience" cards. Each list is split into two columns automatically.
+// Skills section: one group per row. `class` colours the group's box with the
+// matching annotation class (see src/data/classes.js), or "" for none.
 export default [
   {
-    title: "Frontend Development",
-    skills: [
-      { name: "HTML", level: "Advanced" },
-      { name: "CSS/SCSS", level: "Intermediate" },
-      { name: "JavaScript", level: "Advanced" },
-      { name: "Bootstrap", level: "Intermediate" },
-      { name: "React", level: "Advanced" },
-    ],
+    title: "Computer vision & AI",
+    class: "vision",
+    skills: ["PyTorch", "timm", "TensorFlow / Keras", "OpenCV", "ONNX Runtime", "InsightFace", "DeepFace", "CNNs & transfer learning", "RTSP video streams", "Ollama (local LLM)"],
   },
   {
-    title: "Backend Development",
-    skills: [
-      { name: "Node JS", level: "Advanced" },
-      { name: "Python", level: "Advanced" },
-      { name: "Java", level: "Advanced" },
-      { name: "PHP", level: "Intermediate" },
-      { name: "PostgreSQL", level: "Advanced" },
-      { name: "MySQL", level: "Advanced" },
-    ],
+    title: "Backend & distributed systems",
+    class: "distributed",
+    skills: ["Python", "Django", "Django REST Framework", "Django Channels", "FastAPI", "Flask", "Node.js", "Java / Spring Boot", "Celery", "gRPC", "REST", "SOAP", "Microservices"],
   },
   {
-    title: "API Architecture & Communication Protocols",
-    skills: [
-      { name: "REST", level: "Advanced" },
-      { name: "SOAP", level: "Advanced" },
-      { name: "gRPC", level: "Advanced" },
-      { name: "Microservices", level: "Intermediate" },
-    ],
+    title: "Real time & data",
+    class: "real_time",
+    skills: ["WebSockets", "Redis", "PostgreSQL", "MySQL", "SQLite", "JWT", "OpenAPI"],
+  },
+  {
+    title: "Web apps",
+    class: "web_app",
+    skills: ["React", "Next.js", "Vue.js", "TypeScript", "JavaScript", "Redux Toolkit", "Tailwind CSS", "Material UI", "HTML / CSS"],
+  },
+  {
+    title: "Delivery & design",
+    class: "",
+    skills: ["Docker", "Docker Compose", "nginx", "GitHub Actions", "Git", "pytest", "Playwright", "Vercel", "Render", "UML", "MERISE"],
   },
 ];

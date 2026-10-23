@@ -1,0 +1,665 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-23T02:08:15.576Z",
+  "title": "Design System: Omar Haouache Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "midnight-ground": {
+        "role": "neutral",
+        "displayName": "Midnight Ground",
+        "canonical": "#0b1630",
+        "tonalRamp": [
+          "oklch(15.0% 0.054 264.8)",
+          "oklch(26.4% 0.054 264.8)",
+          "oklch(37.9% 0.054 264.8)",
+          "oklch(49.3% 0.054 264.8)",
+          "oklch(60.7% 0.054 264.8)",
+          "oklch(72.1% 0.054 264.8)",
+          "oklch(83.6% 0.054 264.8)",
+          "oklch(95.0% 0.054 264.8)"
+        ]
+      },
+      "midnight-surface": {
+        "role": "neutral",
+        "displayName": "Midnight Surface",
+        "canonical": "#111f42",
+        "tonalRamp": [
+          "oklch(15.0% 0.069 265.3)",
+          "oklch(26.4% 0.069 265.3)",
+          "oklch(37.9% 0.069 265.3)",
+          "oklch(49.3% 0.069 265.3)",
+          "oklch(60.7% 0.069 265.3)",
+          "oklch(72.1% 0.069 265.3)",
+          "oklch(83.6% 0.069 265.3)",
+          "oklch(95.0% 0.069 265.3)"
+        ]
+      },
+      "midnight-surface-raised": {
+        "role": "neutral",
+        "displayName": "Raised Surface",
+        "canonical": "#17284f",
+        "tonalRamp": [
+          "oklch(15.0% 0.075 264.4)",
+          "oklch(26.4% 0.075 264.4)",
+          "oklch(37.9% 0.075 264.4)",
+          "oklch(49.3% 0.075 264.4)",
+          "oklch(60.7% 0.075 264.4)",
+          "oklch(72.1% 0.075 264.4)",
+          "oklch(83.6% 0.075 264.4)",
+          "oklch(95.0% 0.075 264.4)"
+        ]
+      },
+      "midnight-line": {
+        "role": "neutral",
+        "displayName": "Midnight Line",
+        "canonical": "#24365f",
+        "tonalRamp": [
+          "oklch(15.0% 0.076 264.8)",
+          "oklch(26.4% 0.076 264.8)",
+          "oklch(37.9% 0.076 264.8)",
+          "oklch(49.3% 0.076 264.8)",
+          "oklch(60.7% 0.076 264.8)",
+          "oklch(72.1% 0.076 264.8)",
+          "oklch(83.6% 0.076 264.8)",
+          "oklch(95.0% 0.076 264.8)"
+        ]
+      },
+      "ice-ink": {
+        "role": "neutral",
+        "displayName": "Ice Ink",
+        "canonical": "#eef3ff",
+        "tonalRamp": [
+          "oklch(15.0% 0.017 267.8)",
+          "oklch(26.4% 0.017 267.8)",
+          "oklch(37.9% 0.017 267.8)",
+          "oklch(49.3% 0.017 267.8)",
+          "oklch(60.7% 0.017 267.8)",
+          "oklch(72.1% 0.017 267.8)",
+          "oklch(83.6% 0.017 267.8)",
+          "oklch(95.0% 0.017 267.8)"
+        ]
+      },
+      "ice-text": {
+        "role": "neutral",
+        "displayName": "Ice Text",
+        "canonical": "#c6d1e7",
+        "tonalRamp": [
+          "oklch(15.0% 0.033 264.4)",
+          "oklch(26.4% 0.033 264.4)",
+          "oklch(37.9% 0.033 264.4)",
+          "oklch(49.3% 0.033 264.4)",
+          "oklch(60.7% 0.033 264.4)",
+          "oklch(72.1% 0.033 264.4)",
+          "oklch(83.6% 0.033 264.4)",
+          "oklch(95.0% 0.033 264.4)"
+        ]
+      },
+      "slate-muted": {
+        "role": "neutral",
+        "displayName": "Slate Muted",
+        "canonical": "#95a6c8",
+        "tonalRamp": [
+          "oklch(15.0% 0.053 264.2)",
+          "oklch(26.4% 0.053 264.2)",
+          "oklch(37.9% 0.053 264.2)",
+          "oklch(49.3% 0.053 264.2)",
+          "oklch(60.7% 0.053 264.2)",
+          "oklch(72.1% 0.053 264.2)",
+          "oklch(83.6% 0.053 264.2)",
+          "oklch(95.0% 0.053 264.2)"
+        ]
+      },
+      "signal-blue": {
+        "role": "primary",
+        "displayName": "Signal Blue",
+        "canonical": "#4d97ff",
+        "tonalRamp": [
+          "oklch(15.0% 0.171 257.4)",
+          "oklch(26.4% 0.171 257.4)",
+          "oklch(37.9% 0.171 257.4)",
+          "oklch(49.3% 0.171 257.4)",
+          "oklch(60.7% 0.171 257.4)",
+          "oklch(72.1% 0.171 257.4)",
+          "oklch(83.6% 0.171 257.4)",
+          "oklch(95.0% 0.171 257.4)"
+        ]
+      },
+      "signal-blue-ink": {
+        "role": "primary",
+        "displayName": "Signal Blue Ink",
+        "canonical": "#06102a",
+        "tonalRamp": [
+          "oklch(15.0% 0.055 264.8)",
+          "oklch(26.4% 0.055 264.8)",
+          "oklch(37.9% 0.055 264.8)",
+          "oklch(49.3% 0.055 264.8)",
+          "oklch(60.7% 0.055 264.8)",
+          "oklch(72.1% 0.055 264.8)",
+          "oklch(83.6% 0.055 264.8)",
+          "oklch(95.0% 0.055 264.8)"
+        ]
+      },
+      "tag-ink": {
+        "role": "neutral",
+        "displayName": "Tag Ink",
+        "canonical": "#0b1630",
+        "tonalRamp": [
+          "oklch(15.0% 0.054 264.8)",
+          "oklch(26.4% 0.054 264.8)",
+          "oklch(37.9% 0.054 264.8)",
+          "oklch(49.3% 0.054 264.8)",
+          "oklch(60.7% 0.054 264.8)",
+          "oklch(72.1% 0.054 264.8)",
+          "oklch(83.6% 0.054 264.8)",
+          "oklch(95.0% 0.054 264.8)"
+        ]
+      },
+      "scrim": {
+        "role": "neutral",
+        "displayName": "Scrim",
+        "canonical": "rgb(4 9 22 / 0.72)"
+      },
+      "class-vision": {
+        "role": "secondary",
+        "displayName": "Vision Blue",
+        "canonical": "#4da3ff",
+        "tonalRamp": [
+          "oklch(15.0% 0.159 252.4)",
+          "oklch(26.4% 0.159 252.4)",
+          "oklch(37.9% 0.159 252.4)",
+          "oklch(49.3% 0.159 252.4)",
+          "oklch(60.7% 0.159 252.4)",
+          "oklch(72.1% 0.159 252.4)",
+          "oklch(83.6% 0.159 252.4)",
+          "oklch(95.0% 0.159 252.4)"
+        ]
+      },
+      "class-web-app": {
+        "role": "secondary",
+        "displayName": "Web-App Lavender",
+        "canonical": "#a3a9ff",
+        "tonalRamp": [
+          "oklch(15.0% 0.123 280.0)",
+          "oklch(26.4% 0.123 280.0)",
+          "oklch(37.9% 0.123 280.0)",
+          "oklch(49.3% 0.123 280.0)",
+          "oklch(60.7% 0.123 280.0)",
+          "oklch(72.1% 0.123 280.0)",
+          "oklch(83.6% 0.123 280.0)",
+          "oklch(95.0% 0.123 280.0)"
+        ]
+      },
+      "class-real-time": {
+        "role": "secondary",
+        "displayName": "Real-Time Amber",
+        "canonical": "#ffb547",
+        "tonalRamp": [
+          "oklch(15.0% 0.149 73.3)",
+          "oklch(26.4% 0.149 73.3)",
+          "oklch(37.9% 0.149 73.3)",
+          "oklch(49.3% 0.149 73.3)",
+          "oklch(60.7% 0.149 73.3)",
+          "oklch(72.1% 0.149 73.3)",
+          "oklch(83.6% 0.149 73.3)",
+          "oklch(95.0% 0.149 73.3)"
+        ]
+      },
+      "class-distributed": {
+        "role": "secondary",
+        "displayName": "Distributed Green",
+        "canonical": "#3ddc97",
+        "tonalRamp": [
+          "oklch(15.0% 0.164 159.7)",
+          "oklch(26.4% 0.164 159.7)",
+          "oklch(37.9% 0.164 159.7)",
+          "oklch(49.3% 0.164 159.7)",
+          "oklch(60.7% 0.164 159.7)",
+          "oklch(72.1% 0.164 159.7)",
+          "oklch(83.6% 0.164 159.7)",
+          "oklch(95.0% 0.164 159.7)"
+        ]
+      },
+      "light-ground": {
+        "role": "neutral",
+        "displayName": "ground (light theme)",
+        "canonical": "#e6edf7",
+        "tonalRamp": [
+          "oklch(15.0% 0.015 257.2)",
+          "oklch(26.4% 0.015 257.2)",
+          "oklch(37.9% 0.015 257.2)",
+          "oklch(49.3% 0.015 257.2)",
+          "oklch(60.7% 0.015 257.2)",
+          "oklch(72.1% 0.015 257.2)",
+          "oklch(83.6% 0.015 257.2)",
+          "oklch(95.0% 0.015 257.2)"
+        ]
+      },
+      "light-surface": {
+        "role": "neutral",
+        "displayName": "surface (light theme)",
+        "canonical": "#f3f7fc",
+        "tonalRamp": [
+          "oklch(15.0% 0.008 253.9)",
+          "oklch(26.4% 0.008 253.9)",
+          "oklch(37.9% 0.008 253.9)",
+          "oklch(49.3% 0.008 253.9)",
+          "oklch(60.7% 0.008 253.9)",
+          "oklch(72.1% 0.008 253.9)",
+          "oklch(83.6% 0.008 253.9)",
+          "oklch(95.0% 0.008 253.9)"
+        ]
+      },
+      "light-surface-raised": {
+        "role": "neutral",
+        "displayName": "surface-raised (light theme)",
+        "canonical": "#dbe4f1",
+        "tonalRamp": [
+          "oklch(15.0% 0.020 257.5)",
+          "oklch(26.4% 0.020 257.5)",
+          "oklch(37.9% 0.020 257.5)",
+          "oklch(49.3% 0.020 257.5)",
+          "oklch(60.7% 0.020 257.5)",
+          "oklch(72.1% 0.020 257.5)",
+          "oklch(83.6% 0.020 257.5)",
+          "oklch(95.0% 0.020 257.5)"
+        ]
+      },
+      "light-line": {
+        "role": "neutral",
+        "displayName": "line (light theme)",
+        "canonical": "#c6d2e4",
+        "tonalRamp": [
+          "oklch(15.0% 0.028 258.4)",
+          "oklch(26.4% 0.028 258.4)",
+          "oklch(37.9% 0.028 258.4)",
+          "oklch(49.3% 0.028 258.4)",
+          "oklch(60.7% 0.028 258.4)",
+          "oklch(72.1% 0.028 258.4)",
+          "oklch(83.6% 0.028 258.4)",
+          "oklch(95.0% 0.028 258.4)"
+        ]
+      },
+      "light-ink": {
+        "role": "neutral",
+        "displayName": "ink (light theme)",
+        "canonical": "#0b1a33",
+        "tonalRamp": [
+          "oklch(15.0% 0.053 260.0)",
+          "oklch(26.4% 0.053 260.0)",
+          "oklch(37.9% 0.053 260.0)",
+          "oklch(49.3% 0.053 260.0)",
+          "oklch(60.7% 0.053 260.0)",
+          "oklch(72.1% 0.053 260.0)",
+          "oklch(83.6% 0.053 260.0)",
+          "oklch(95.0% 0.053 260.0)"
+        ]
+      },
+      "light-text": {
+        "role": "neutral",
+        "displayName": "text (light theme)",
+        "canonical": "#24344f",
+        "tonalRamp": [
+          "oklch(15.0% 0.053 260.5)",
+          "oklch(26.4% 0.053 260.5)",
+          "oklch(37.9% 0.053 260.5)",
+          "oklch(49.3% 0.053 260.5)",
+          "oklch(60.7% 0.053 260.5)",
+          "oklch(72.1% 0.053 260.5)",
+          "oklch(83.6% 0.053 260.5)",
+          "oklch(95.0% 0.053 260.5)"
+        ]
+      },
+      "light-muted": {
+        "role": "neutral",
+        "displayName": "muted (light theme)",
+        "canonical": "#4b5d7a",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 259.8)",
+          "oklch(26.4% 0.052 259.8)",
+          "oklch(37.9% 0.052 259.8)",
+          "oklch(49.3% 0.052 259.8)",
+          "oklch(60.7% 0.052 259.8)",
+          "oklch(72.1% 0.052 259.8)",
+          "oklch(83.6% 0.052 259.8)",
+          "oklch(95.0% 0.052 259.8)"
+        ]
+      },
+      "light-signal-blue": {
+        "role": "primary",
+        "displayName": "Signal Blue (light theme)",
+        "canonical": "#1747c9",
+        "tonalRamp": [
+          "oklch(15.0% 0.207 264.1)",
+          "oklch(26.4% 0.207 264.1)",
+          "oklch(37.9% 0.207 264.1)",
+          "oklch(49.3% 0.207 264.1)",
+          "oklch(60.7% 0.207 264.1)",
+          "oklch(72.1% 0.207 264.1)",
+          "oklch(83.6% 0.207 264.1)",
+          "oklch(95.0% 0.207 264.1)"
+        ]
+      },
+      "light-signal-blue-ink": {
+        "role": "primary",
+        "displayName": "Signal Blue Ink (light theme)",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 89.9)",
+          "oklch(26.4% 0.000 89.9)",
+          "oklch(37.9% 0.000 89.9)",
+          "oklch(49.3% 0.000 89.9)",
+          "oklch(60.7% 0.000 89.9)",
+          "oklch(72.1% 0.000 89.9)",
+          "oklch(83.6% 0.000 89.9)",
+          "oklch(95.0% 0.000 89.9)"
+        ]
+      },
+      "light-tag-ink": {
+        "role": "neutral",
+        "displayName": "Tag Ink (light theme)",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 89.9)",
+          "oklch(26.4% 0.000 89.9)",
+          "oklch(37.9% 0.000 89.9)",
+          "oklch(49.3% 0.000 89.9)",
+          "oklch(60.7% 0.000 89.9)",
+          "oklch(72.1% 0.000 89.9)",
+          "oklch(83.6% 0.000 89.9)",
+          "oklch(95.0% 0.000 89.9)"
+        ]
+      },
+      "light-scrim": {
+        "role": "neutral",
+        "displayName": "Scrim (light theme)",
+        "canonical": "rgb(11 26 51 / 0.45)"
+      },
+      "light-class-vision": {
+        "role": "secondary",
+        "displayName": "Vision Blue (light theme)",
+        "canonical": "#1f5fe0",
+        "tonalRamp": [
+          "oklch(15.0% 0.207 262.2)",
+          "oklch(26.4% 0.207 262.2)",
+          "oklch(37.9% 0.207 262.2)",
+          "oklch(49.3% 0.207 262.2)",
+          "oklch(60.7% 0.207 262.2)",
+          "oklch(72.1% 0.207 262.2)",
+          "oklch(83.6% 0.207 262.2)",
+          "oklch(95.0% 0.207 262.2)"
+        ]
+      },
+      "light-class-web-app": {
+        "role": "secondary",
+        "displayName": "Web-App Lavender (light theme)",
+        "canonical": "#5b34d6",
+        "tonalRamp": [
+          "oklch(15.0% 0.228 285.0)",
+          "oklch(26.4% 0.228 285.0)",
+          "oklch(37.9% 0.228 285.0)",
+          "oklch(49.3% 0.228 285.0)",
+          "oklch(60.7% 0.228 285.0)",
+          "oklch(72.1% 0.228 285.0)",
+          "oklch(83.6% 0.228 285.0)",
+          "oklch(95.0% 0.228 285.0)"
+        ]
+      },
+      "light-class-real-time": {
+        "role": "secondary",
+        "displayName": "Real-Time Amber (light theme)",
+        "canonical": "#9a5600",
+        "tonalRamp": [
+          "oklch(15.0% 0.121 61.2)",
+          "oklch(26.4% 0.121 61.2)",
+          "oklch(37.9% 0.121 61.2)",
+          "oklch(49.3% 0.121 61.2)",
+          "oklch(60.7% 0.121 61.2)",
+          "oklch(72.1% 0.121 61.2)",
+          "oklch(83.6% 0.121 61.2)",
+          "oklch(95.0% 0.121 61.2)"
+        ]
+      },
+      "light-class-distributed": {
+        "role": "secondary",
+        "displayName": "Distributed Green (light theme)",
+        "canonical": "#0b7349",
+        "tonalRamp": [
+          "oklch(15.0% 0.110 158.8)",
+          "oklch(26.4% 0.110 158.8)",
+          "oklch(37.9% 0.110 158.8)",
+          "oklch(49.3% 0.110 158.8)",
+          "oklch(60.7% 0.110 158.8)",
+          "oklch(72.1% 0.110 158.8)",
+          "oklch(83.6% 0.110 158.8)",
+          "oklch(95.0% 0.110 158.8)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only, each line in its annotation box."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles; box draws when first seen."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card titles, timeline roles, skill groups."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "One paragraph under a heading."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Annotation chips, filter chips, legend, dates, captions. Mono only here."
+      },
+      "label-sm": {
+        "displayName": "Label small",
+        "purpose": "Class tags and frame addresses."
+      }
+    },
+    "shadows": [
+      {
+        "name": "dialog-lift",
+        "value": "0 24px 60px rgb(0 0 0 / 0.35)",
+        "purpose": "The modal panel only; the page itself is flat."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "All box draws, press scale and dialog transform."
+      },
+      {
+        "name": "anno-draw",
+        "value": "clip-path inset(0 100% 100% 0) -> inset(0) 0.7s ease-out, delay 0.15s + i*0.18s",
+        "purpose": "Annotation boxes draw once from the top-left in frame order."
+      },
+      {
+        "name": "anno-tag",
+        "value": "opacity 0->1, translateY(4px)->0, 0.35s, delay 0.5s + i*0.18s",
+        "purpose": "Label chip follows its box."
+      },
+      {
+        "name": "section-title-draw",
+        "value": "clip-path transition 0.8s ease-out on first intersection",
+        "purpose": "Section title box draws once (IntersectionObserver, -15% bottom margin)."
+      },
+      {
+        "name": "card-hover-draw",
+        "value": "clip-path transition 0.45s ease-out",
+        "purpose": "Lead class box around card media on fine-pointer hover/focus."
+      },
+      {
+        "name": "press",
+        "value": "transform scale(0.97) 160ms ease-out",
+        "purpose": "Buttons and filter chips on :active."
+      },
+      {
+        "name": "filter-layout",
+        "value": "motion/react layout + AnimatePresence popLayout, spring visualDuration 0.35 bounce 0, exit 0.15s, scale 0.96 + opacity, MotionConfig reducedMotion=\"user\"",
+        "purpose": "Work grid re-layout when the class filter changes."
+      },
+      {
+        "name": "dialog",
+        "value": "open opacity 220ms + transform translateY(8px) scale(0.97)->none 240ms; close 180ms",
+        "purpose": "Modal enter/exit."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Disables box draws, landmark pop-in, title/card draws, dialog transform and smooth scroll."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "576px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "960px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Annotation Box",
+      "kind": "custom",
+      "refersTo": "anno-tag",
+      "description": "2px square class-coloured box with a filled mono label chip on its top-left edge; draws once.",
+      "html": "<span class=\"ds-anno\"><span class=\"ds-anno__tag\">computer_vision</span>Software that sees,</span>",
+      "css": ".ds-anno{--c:var(--class-vision,#4da3ff);position:relative;display:inline-block;margin-top:1.6rem;padding:.02em .14em .06em;font-family:Archivo,system-ui,sans-serif;font-weight:850;font-size:2.4rem;letter-spacing:-.03em;color:var(--ink,#eef3ff)}.ds-anno::before{content:'';position:absolute;inset:0;border:2px solid var(--c);pointer-events:none;animation:ds-draw .7s cubic-bezier(.23,1,.32,1) .15s both}.ds-anno__tag{position:absolute;bottom:100%;left:0;padding:.1rem .5rem;background:var(--c);color:var(--tag-ink,#0b1630);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.8rem;font-weight:600;line-height:1.5;letter-spacing:0;white-space:nowrap}@keyframes ds-draw{from{clip-path:inset(0 100% 100% 0)}to{clip-path:inset(0)}}@media (prefers-reduced-motion:reduce){.ds-anno::before{animation:none}}"
+    },
+    {
+      "name": "Class Tags",
+      "kind": "chip",
+      "refersTo": "class-tag",
+      "description": "Filled square mono chips, one per annotation class; untyped tags use the raised surface.",
+      "html": "<ul class=\"ds-tags\"><li class=\"ds-tag ds-tag--vision\">vision</li><li class=\"ds-tag ds-tag--web_app\">web_app</li><li class=\"ds-tag ds-tag--real_time\">real_time</li><li class=\"ds-tag ds-tag--distributed\">distributed</li><li class=\"ds-tag\">internship</li></ul>",
+      "css": ".ds-tags{display:flex;flex-wrap:wrap;gap:.35rem;list-style:none;margin:0;padding:0}.ds-tag{--c:var(--surface-2,#17284f);padding:.05rem .45rem;background:var(--c);color:var(--text,#c6d1e7);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;font-weight:600;line-height:1.6;white-space:nowrap}.ds-tag--vision{--c:var(--class-vision,#4da3ff);color:var(--tag-ink,#0b1630)}.ds-tag--web_app{--c:var(--class-web_app,#a3a9ff);color:var(--tag-ink,#0b1630)}.ds-tag--real_time{--c:var(--class-real_time,#ffb547);color:var(--tag-ink,#0b1630)}.ds-tag--distributed{--c:var(--class-distributed,#3ddc97);color:var(--tag-ink,#0b1630)}"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one signal-blue action per group.",
+      "html": "<a href=\"#\" class=\"ds-btn ds-btn--primary\">View projects</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.7rem 1.15rem;border:1px solid var(--line,#24365f);border-radius:10px;background:var(--surface,#111f42);color:var(--ink,#eef3ff);font-family:Archivo,system-ui,sans-serif;font-weight:650;line-height:1.2;text-decoration:none;transition:transform 160ms cubic-bezier(.23,1,.32,1),background-color 200ms ease,border-color 200ms ease}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible{outline:2px solid var(--primary,#4d97ff);outline-offset:3px}.ds-btn--primary{border-color:var(--primary,#4d97ff);background:var(--primary,#4d97ff);color:var(--primary-ink,#06102a)}@media (hover:hover) and (pointer:fine){.ds-btn--primary:hover{border-color:var(--ink,#eef3ff)}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Surface button with an optional leading icon: CV, GitHub, LinkedIn.",
+      "html": "<a href=\"#\" class=\"ds-btn2\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M12 3v12m0 0l-5-5m5 5l5-5M5 21h14\"/></svg>Download CV</a>",
+      "css": ".ds-btn2{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.7rem 1.15rem;border:1px solid var(--line,#24365f);border-radius:10px;background:var(--surface,#111f42);color:var(--ink,#eef3ff);font-family:Archivo,system-ui,sans-serif;font-weight:650;line-height:1.2;text-decoration:none;transition:transform 160ms cubic-bezier(.23,1,.32,1),background-color 200ms ease,border-color 200ms ease}.ds-btn2:active{transform:scale(.97)}.ds-btn2:focus-visible{outline:2px solid var(--primary,#4d97ff);outline-offset:3px}@media (hover:hover) and (pointer:fine){.ds-btn2:hover{border-color:var(--muted,#95a6c8);background:var(--surface-2,#17284f)}}"
+    },
+    {
+      "name": "Filter Chips",
+      "kind": "chip",
+      "refersTo": "filter-chip",
+      "description": "The class legend as project filter: inactive classes are 38% ghosts, active ones get full opacity and a 14% wash.",
+      "html": "<div class=\"ds-filter\"><button class=\"ds-fchip ds-fchip--vision is-on\">vision <span>4</span></button><button class=\"ds-fchip ds-fchip--web_app\">web_app <span>8</span></button><button class=\"ds-fchip ds-fchip--real_time\">real_time <span>3</span></button><button class=\"ds-fchip ds-fchip--distributed\">distributed <span>3</span></button></div>",
+      "css": ".ds-filter{display:flex;flex-wrap:wrap;gap:.6rem}.ds-fchip{--c:var(--ink,#eef3ff);display:inline-flex;align-items:center;gap:.55rem;min-height:44px;padding:.45rem .85rem;border:2px solid var(--c);background:none;color:var(--ink,#eef3ff);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.9rem;opacity:.38;cursor:pointer;transition:opacity 200ms ease,background-color 200ms ease,transform 160ms cubic-bezier(.23,1,.32,1)}.ds-fchip span{color:var(--muted,#95a6c8);font-size:.8rem}.ds-fchip.is-on{opacity:1;background:color-mix(in srgb,var(--c) 14%,transparent)}.ds-fchip:hover{opacity:1}.ds-fchip:active{transform:scale(.97)}.ds-fchip:focus-visible{outline:2px solid var(--primary,#4d97ff);outline-offset:3px}.ds-fchip--vision{--c:var(--class-vision,#4da3ff)}.ds-fchip--web_app{--c:var(--class-web_app,#a3a9ff)}.ds-fchip--real_time{--c:var(--class-real_time,#ffb547)}.ds-fchip--distributed{--c:var(--class-distributed,#3ddc97)}"
+    },
+    {
+      "name": "Project Card (drawn flow)",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "16px card with a frame address chip; with no real screenshot the media panel draws the architecture flow. Lead class box draws on hover.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card__media\"><span class=\"ds-card__frame\">#004 · internship</span><ol class=\"ds-card__flow\"><li>Camera feed</li><li>YOLO detector</li><li>Django + WebSockets</li><li>React dashboard</li></ol></div><div class=\"ds-card__body\"><ul class=\"ds-card__classes\"><li style=\"background:var(--class-vision,#4da3ff)\">vision</li><li style=\"background:var(--class-real_time,#ffb547)\">real_time</li></ul><h3>FRSYS Face Recognition</h3><p>Face recognition at building entrances, streamed live to guard posts.</p></div></article>",
+      "css": ".ds-card{--c:var(--class-vision,#4da3ff);display:flex;flex-direction:column;max-width:360px;overflow:hidden;border:1px solid var(--line,#24365f);border-radius:16px;background:var(--surface,#111f42);font-family:Archivo,system-ui,sans-serif}.ds-card__media{position:relative;aspect-ratio:16/10;background:var(--surface-2,#17284f)}.ds-card__media::after{content:'';position:absolute;inset:12px;border:2px solid var(--c);clip-path:inset(0 100% 100% 0);transition:clip-path .45s cubic-bezier(.23,1,.32,1);pointer-events:none}.ds-card:hover .ds-card__media::after,.ds-card:focus-within .ds-card__media::after{clip-path:inset(0)}.ds-card__frame{position:absolute;top:12px;left:12px;z-index:1;padding:.05rem .5rem;background:var(--ground,#0b1630);color:var(--ink,#eef3ff);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;font-weight:600;line-height:1.7}.ds-card__flow{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;margin:0;padding:2.25rem 1rem 1rem;list-style:none}.ds-card__flow li{position:relative;padding:.2rem .65rem;border:2px solid var(--c);background:var(--surface,#111f42);color:var(--ink,#eef3ff);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.78rem;white-space:nowrap}.ds-card__flow li+li::before{content:'';position:absolute;bottom:100%;left:50%;width:2px;height:.7rem;background:var(--c)}.ds-card__body{padding:1.25rem}.ds-card__classes{display:flex;gap:.35rem;margin:0;padding:0;list-style:none}.ds-card__classes li{padding:.05rem .45rem;color:var(--tag-ink,#0b1630);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;font-weight:600}.ds-card h3{margin:.85rem 0 0;color:var(--ink,#eef3ff);font-size:1.3rem;font-weight:750;letter-spacing:-.01em}.ds-card p{margin:.5rem 0 0;color:var(--muted,#95a6c8);font-size:.98rem;line-height:1.55}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Ground-colour well with a 1px line border; signal-blue border and outline on focus.",
+      "html": "<label class=\"ds-field\"><span>Email</span><input type=\"email\" placeholder=\"you@company.com\"></label>",
+      "css": ".ds-field{display:grid;gap:.4rem;font-family:Archivo,system-ui,sans-serif}.ds-field span{color:var(--ink,#eef3ff);font-size:.95rem;font-weight:600}.ds-field input{width:100%;padding:.8rem 1rem;border:1px solid var(--line,#24365f);border-radius:10px;background:var(--ground,#0b1630);color:var(--ink,#eef3ff);font:inherit;transition:border-color 200ms ease}.ds-field input::placeholder{color:var(--muted,#95a6c8)}.ds-field input:focus-visible{border-color:var(--primary,#4d97ff);outline:2px solid var(--primary,#4d97ff);outline-offset:1px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Sticky header: wide wordmark, section links with a 2px signal-blue active underline, GitHub/LinkedIn always visible.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav__logo\" href=\"#\">Omar Haouache</a><ul class=\"ds-nav__list\"><li><a class=\"is-active\" href=\"#\">Work</a></li><li><a href=\"#\">Experience</a></li><li><a href=\"#\">Stack</a></li><li><a href=\"#\">Contact</a></li></ul><a class=\"ds-nav__social\" href=\"#\">GitHub</a><a class=\"ds-nav__social\" href=\"#\">LinkedIn</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:1.5rem;height:4.25rem;padding-inline:1rem;background:var(--ground,#0b1630);border-bottom:1px solid var(--line,#24365f);font-family:Archivo,system-ui,sans-serif}.ds-nav a{text-decoration:none}.ds-nav__logo{color:var(--ink,#eef3ff);font-weight:800;font-stretch:110%;font-size:1.15rem;letter-spacing:-.01em;white-space:nowrap}.ds-nav__list{display:flex;gap:.25rem;margin:0 auto;padding:0;list-style:none}.ds-nav__list a{display:block;padding:.5rem .75rem;color:var(--muted,#95a6c8);font-weight:550;transition:color 200ms ease}.ds-nav__list a:hover,.ds-nav__list a.is-active{color:var(--ink,#eef3ff)}.ds-nav__list a.is-active{box-shadow:inset 0 -2px 0 var(--primary,#4d97ff)}.ds-nav__social{display:inline-flex;align-items:center;min-height:44px;padding-inline:.6rem;border-radius:10px;color:var(--ink,#eef3ff);font-weight:600;transition:background-color 200ms ease}.ds-nav__social:hover{background:var(--surface,#111f42)}.ds-nav a:focus-visible{outline:2px solid var(--primary,#4d97ff);outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Annotated Frame",
+    "overview": "A familiar developer-portfolio layout (sticky nav, split hero, project grid, timeline, contact) carrying a computer-vision annotation layer: the page is labelled the way Omar's models label frames. Headlines, the portrait and project screenshots wear 2px square bounding boxes with a filled mono label chip on the top-left corner, coloured by one of four annotation classes. The classes are the site's taxonomy: the hero legend, the project tags, the skill groups and the project filter all use the same four colours, so a recruiter learns the code once.\n\nThe ground is a deep midnight navy with ice-white text; the light theme is an ice-blue paper with the same structure and darker class colours that keep contrast. Density is moderate and editorial: generous section padding, one strong accent (signal blue) for the primary action, and colour otherwise reserved for annotation classes. Everything shown is proof (real screenshots, a real portrait with real landmarks, or a drawn architecture diagram), never stock art or clip-art.\n\nMotion is the box being drawn: each annotation reveals once from its top-left corner with a clip-path wipe, in frame order. After that the page is still, except for direct feedback (press scale, filter re-layout).",
+    "keyCharacteristics": [
+      "Midnight navy ground (dark default), ice-blue light theme on `body.light-theme`.",
+      "Four annotation classes: vision, web_app, real_time, distributed.",
+      "One stroke weight (2px), square boxes, filled mono label chips.",
+      "Soft 16px cards and 10px controls; annotation boxes are never rounded.",
+      "Archivo (variable width) for everything read; JetBrains Mono only for labels and data.",
+      "Fixed frame addresses (#001…) on every project card."
+    ],
+    "rules": [
+      {
+        "name": "The Class Colour Rule",
+        "body": "The four class colours mean their class and nothing else. Never use one as a generic accent; a new category gets a new entry in `src/data/classes.js` and a matching `--class-<id>` token in both themes.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Action Rule",
+        "body": "Signal blue fills exactly one kind of thing: the primary action. Every other button is a surface button.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono Is Data Rule",
+        "body": "JetBrains Mono appears only on labels, class names, frame addresses, dates, counts and captions. Never on headings, paragraphs or buttons.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Eyebrow Rule",
+        "body": "Section headings stand alone: no small uppercase kicker above them. The annotation chip is the only label that sits above a heading, and it is a class name, not a tagline.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Page Rule",
+        "body": "Nothing on the page itself casts a shadow. Separate with surface steps and lines; reserve the shadow for content that sits above the page.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Box Rule",
+        "body": "An annotation box is never rounded and never thicker or thinner than 2px. If it has corners, it is a container, not an annotation.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do label work the way a model would: a 2px square box in the class colour with a filled mono chip on its top-left corner.",
+      "Do pick every category colour from the four annotation classes, and define any new class in both themes.",
+      "Do show real screenshots or frames; when there is none, draw the architecture flow in the card panel.",
+      "Do keep every project's frame address fixed (#001…) by its position in `projects.js`.",
+      "Do draw each box once (clip-path from the top-left, 0.7s, `cubic-bezier(0.23, 1, 0.32, 1)`) and leave it still; disable the draw under `prefers-reduced-motion`.",
+      "Do keep touch targets at 44px and gate hover effects behind `(hover: hover) and (pointer: fine)`.",
+      "Do keep GitHub and LinkedIn in the header at every width."
+    ],
+    "donts": [
+      "Don't use stock photography, illustrations or clip-art anywhere, including as a card placeholder.",
+      "Don't put an eyebrow or kicker above a heading.",
+      "Don't set headings, body copy or buttons in JetBrains Mono; mono is for labels and data.",
+      "Don't show self-rated skill levels: no bars, percentages, stars or \"expert\" badges. Skills are plain lists grouped by class.",
+      "Don't round an annotation box or chip, or draw one with any stroke other than 2px.",
+      "Don't add shadows to on-page surfaces; only the dialog floats.",
+      "Don't use a class colour as decoration or a second accent."
+    ]
+  }
+}

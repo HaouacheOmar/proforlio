@@ -1,40 +1,32 @@
-const LINKS = [
-  { href: "#", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#work", label: "Work" },
-  { href: "#contact", label: "Contact" },
-];
+import { CV, GITHUB, LINKEDIN } from "../data/links.js";
 
-const SOCIALS = [
-  { href: "https://www.facebook.com/abderrahmane.haouache.247035/", icon: "bxl-facebook", label: "Facebook" },
-  { href: "https://github.com/HaouacheOmar", icon: "bxl-github", label: "GitHub" },
-  { href: "#", icon: "bxl-linkedin", label: "LinkedIn" },
+const LINKS = [
+  { href: GITHUB, label: "GitHub", external: true },
+  { href: LINKEDIN, label: "LinkedIn", external: true },
+  { href: CV, label: "CV (PDF)", download: true },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__container container">
-        <h1 className="footer__title">Omar</h1>
-
-        <ul className="footer__list">
-          {LINKS.map(({ href, label }) => (
-            <li className="footer__item" key={label}>
-              <a href={href} className="footer__link">{label}</a>
-            </li>
-          ))}
-        </ul>
-
-        <ul className="footer__social">
-          {SOCIALS.map(({ href, icon, label }) => (
-            <li className="footer__social-item" key={label}>
-              <a href={href} target="_blank" rel="noopener noreferrer" className="footer__social-link" aria-label={label}>
-                <i className={`bx ${icon} footer__social-icon`}></i>
+        <p className="footer__name">Omar Haouache</p>
+        <ul className="footer__links">
+          {LINKS.map(({ href, label, external, download }) => (
+            <li key={label}>
+              <a
+                href={href}
+                className="footer__link"
+                {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+                {...(download && { download: true })}
+              >
+                {label}
               </a>
             </li>
           ))}
         </ul>
+        <p className="footer__note">Software engineer · computer vision &amp; full-stack · Algiers</p>
       </div>
     </footer>
   );

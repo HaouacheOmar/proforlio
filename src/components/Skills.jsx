@@ -1,40 +1,25 @@
-import skillCards from "../data/skills.js";
-
-function SkillGroup({ skills }) {
-  return (
-    <div className="skills__group">
-      {skills.map(({ name, level }) => (
-        <div className="skills__data" key={name}>
-          <i className="bx bxs-badge-check"></i>
-          <div>
-            <h3 className="skills__name">{name}</h3>
-            <span className="skills__level">{level}</span>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
+import skillGroups from "../data/skills.js";
 
 export default function Skills() {
   return (
-    <section className="skills section" id="skills">
-      <span className="section__subtitle">My Abilities</span>
-      <h2 className="section__title">My Experience</h2>
+    <section className="skills section container" id="skills">
+      <div className="section__head">
+        <h2 className="section__title">Stack</h2>
+        <p className="section__lede">The tools behind the projects above, grouped by the class they serve.</p>
+      </div>
 
-      <div className="skills__container container grid">
-        {skillCards.map(({ title, skills }) => {
-          const half = Math.ceil(skills.length / 2);
-          return (
-            <div className="skills__content" key={title}>
-              <h3 className="skills__title">{title}</h3>
-              <div className="skills__box">
-                <SkillGroup skills={skills.slice(0, half)} />
-                <SkillGroup skills={skills.slice(half)} />
-              </div>
-            </div>
-          );
-        })}
+      <div className="skills__list">
+        {skillGroups.map(({ title, class: cls, skills }) => (
+          <div className={`skills__group${cls ? ` skills__group--${cls}` : ""}`} key={title}>
+            <h3 className="skills__title">
+              {title}
+              {cls && <span className={`tag tag--${cls}`}>{cls}</span>}
+            </h3>
+            <ul className="skills__items">
+              {skills.map((name) => <li key={name}>{name}</li>)}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   );

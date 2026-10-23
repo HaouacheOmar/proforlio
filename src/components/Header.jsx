@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
+import { GITHUB, LINKEDIN } from "../data/links.js";
 
 const NAV = [
-  { id: "home", icon: "bx-home", label: "Home" },
-  { id: "about", icon: "bx-user", label: "About" },
-  { id: "skills", icon: "bx-book", label: "Skills" },
-  { id: "work", icon: "bx-briefcase-alt-2", label: "Work" },
-  { id: "contact", icon: "bx-message-square-dots", label: "Contact" },
+  { id: "work", label: "Work" },
+  { id: "experience", label: "Experience" },
+  { id: "skills", label: "Stack" },
+  { id: "contact", label: "Contact" },
 ];
 
 function readTheme() {
@@ -28,13 +28,13 @@ export default function Header() {
     } catch {}
   }, [light]);
 
-  // Header background + highlight the nav icon of the section in view
+  // Header border + highlight the nav link of the section in view
   useEffect(() => {
     const sections = [...document.querySelectorAll("section[id]")];
     const onScroll = () => {
-      setScrolled(scrollY >= 50);
+      setScrolled(scrollY >= 20);
       const current = sections.find((s) => {
-        const top = s.offsetTop - 58;
+        const top = s.offsetTop - 120;
         return scrollY > top && scrollY <= top + s.offsetHeight;
       });
       setActive(current?.id ?? null);
@@ -45,25 +45,29 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`header${scrolled ? " scroll-header" : ""}`} id="header">
-      <nav className="nav container">
-        <a href="#" className="nav__logo">Omar</a>
+    <header className={`header${scrolled ? " header--scrolled" : ""}`}>
+      <nav className="nav container" aria-label="Main">
+        <a href="#home" className="nav__logo">Omar Haouache</a>
 
-        <div className="nav__menu">
-          <ul className="nav__list">
-            {NAV.map(({ id, icon, label }) => (
-              <li className="nav__item" key={id}>
-                <a href={`#${id}`} className={`nav__link${active === id ? " active-link" : ""}`} aria-label={label}>
-                  <i className={`bx ${icon}`}></i>
-                </a>
-              </li>
-            ))}
-          </ul>
+        <ul className="nav__list">
+          {NAV.map(({ id, label }) => (
+            <li key={id}>
+              <a href={`#${id}`} className={`nav__link${active === id ? " nav__link--active" : ""}`}>{label}</a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="nav__end">
+          <a href={GITHUB} target="_blank" rel="noopener noreferrer" className="nav__social" aria-label="GitHub (opens in new tab)">
+            <i className="bx bxl-github" aria-hidden="true"></i><span>GitHub</span>
+          </a>
+          <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="nav__social" aria-label="LinkedIn (opens in new tab)">
+            <i className="bx bxl-linkedin-square" aria-hidden="true"></i><span>LinkedIn</span>
+          </a>
+          <button type="button" className="nav__theme" aria-label={light ? "Switch to dark theme" : "Switch to light theme"} onClick={() => setLight((l) => !l)}>
+            <i className={`bx ${light ? "bx-moon" : "bx-sun"}`} aria-hidden="true"></i>
+          </button>
         </div>
-
-        <button type="button" className="change-theme" aria-label="Toggle light/dark theme" onClick={() => setLight((l) => !l)}>
-          <i className={`bx ${light ? "bx-sun" : "bx-moon"}`}></i>
-        </button>
       </nav>
     </header>
   );

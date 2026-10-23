@@ -1,6 +1,12 @@
 import { useState } from "react";
+import { EMAIL, GITHUB, LINKEDIN, PHONE } from "../data/links.js";
 
-const EMAIL = "omarabderahmane325@gmail.com";
+const CHANNELS = [
+  { icon: "bx-envelope", label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
+  { icon: "bxl-linkedin-square", label: "LinkedIn", value: "omar-haouache", href: LINKEDIN, external: true },
+  { icon: "bxl-github", label: "GitHub", value: "HaouacheOmar", href: GITHUB, external: true },
+  { icon: "bxl-whatsapp", label: "WhatsApp", value: PHONE, href: "https://wa.me/213553367537?text=Hello%20Omar", external: true },
+];
 
 export default function Contact() {
   const [status, setStatus] = useState("");
@@ -35,64 +41,52 @@ export default function Contact() {
   }
 
   return (
-    <section className="contact section" id="contact">
-      <span className="section__subtitle">Get in touch</span>
-      <h2 className="section__title">Contact Me</h2>
+    <section className="contact section container" id="contact">
+      <div className="contact__intro">
+        <h2 className="section__title">Let's talk</h2>
+        <p className="section__lede">
+          Hiring for a software engineer or a computer vision engineer? Send a message, or reach me directly.
+        </p>
 
-      <div className="contact__container container grid">
-        <div className="contact__content">
-          <h3 className="contact__title contact__title-info">Talk to me</h3>
-
-          <div className="contact__info">
-            <div className="contact__card">
-              <i className="bx bx-mail-send contact__card-icon"></i>
-              <h3 className="contact__card-title">Email</h3>
-              <span className="contact__card-data">{EMAIL}</span>
-              <a href={`mailto:${EMAIL}`} className="contact__button">
-                Write Me <i className="bx bx-right-arrow contact__button-icon"></i>
+        <ul className="contact__channels">
+          {CHANNELS.map(({ icon, label, value, href, external }) => (
+            <li key={label}>
+              <a href={href} className="contact__channel" {...(external && { target: "_blank", rel: "noopener noreferrer" })}>
+                <i className={`bx ${icon}`} aria-hidden="true"></i>
+                <span className="contact__label">{label}</span>
+                <span className="contact__value">{value}</span>
               </a>
-            </div>
-
-            <div className="contact__card">
-              <i className="bx bxl-whatsapp contact__card-icon"></i>
-              <h3 className="contact__card-title">WhatsApp</h3>
-              <span className="contact__card-data">+213 553 36 75 37</span>
-              <a href="https://wa.me/213553367537?text=Hey%20Omar!" target="_blank" rel="noopener noreferrer" className="contact__button">
-                Write Me <i className="bx bx-right-arrow contact__button-icon"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="contact__content">
-          <h3 className="contact__title contact__title-form">Write Me your Message</h3>
-
-          <form className="contact__form" onSubmit={handleSubmit}>
-            <input type="hidden" name="_subject" defaultValue="New message from your portfolio" />
-            <input type="hidden" name="_captcha" defaultValue="false" />
-            <input type="text" name="_honey" tabIndex="-1" autoComplete="off" aria-hidden="true" style={{ display: "none" }} />
-
-            <div className="contact__form-div">
-              <label htmlFor="contact-name" className="contact__form-tag">Name</label>
-              <input type="text" id="contact-name" name="name" autoComplete="name" required placeholder="Enter name" className="contact__form-input" />
-            </div>
-
-            <div className="contact__form-div">
-              <label htmlFor="contact-email" className="contact__form-tag">Mail</label>
-              <input type="email" id="contact-email" name="email" autoComplete="email" required placeholder="Enter email" className="contact__form-input" />
-            </div>
-
-            <div className="contact__form-div contact__form-area">
-              <label htmlFor="contact-message" className="contact__form-tag">Message</label>
-              <textarea name="message" id="contact-message" required cols="30" rows="10" placeholder="Write your Message" className="contact__form-input"></textarea>
-            </div>
-
-            <button className="button" disabled={sending}>Send Message</button>
-
-            <p className="contact__form-status" role="status" aria-live="polite">{status}</p>
-          </form>
-        </div>
+            </li>
+          ))}
+        </ul>
       </div>
+
+      <form className="contact__form" onSubmit={handleSubmit}>
+        <input type="hidden" name="_subject" defaultValue="New message from your portfolio" />
+        <input type="hidden" name="_captcha" defaultValue="false" />
+        <input type="text" name="_honey" tabIndex="-1" autoComplete="off" aria-hidden="true" style={{ display: "none" }} />
+
+        <div className="field">
+          <label htmlFor="contact-name">Name</label>
+          <input type="text" id="contact-name" name="name" autoComplete="name" required placeholder="Your name" />
+        </div>
+
+        <div className="field">
+          <label htmlFor="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" autoComplete="email" required placeholder="you@company.com" />
+        </div>
+
+        <div className="field">
+          <label htmlFor="contact-message">Message</label>
+          <textarea name="message" id="contact-message" required rows="6" placeholder="The role, the team, and how to reach you"></textarea>
+        </div>
+
+        <button className="button button--primary" disabled={sending}>
+          {sending ? "Sending..." : "Send message"}
+        </button>
+
+        <p className="contact__status" role="status" aria-live="polite">{status}</p>
+      </form>
     </section>
   );
 }
