@@ -442,26 +442,83 @@ button {
 
 .hero__face {
   position: absolute;
-  left: 26%;
-  top: 20%;
-  width: 51%;
-  height: 62%;
+  left: 25%;
+  top: 23%;
+  width: 52%;
+  height: 65%;
 }
 
-.hero__point {
+.hero__mesh {
   position: absolute;
-  width: 8px;
-  height: 8px;
-  margin: -4px 0 0 -4px;
-  border-radius: 50%;
-  background: var(--class-vision);
-  box-shadow: 0 0 0 2px var(--ground);
-  animation: point-in 0.3s var(--ease-out) calc(0.9s + var(--i) * 0.06s) both;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.hero__mesh :is(polyline, polygon, line) {
+  fill: none;
+  stroke: var(--class-vision);
+  stroke-width: 0.3; /* viewBox units: about 1px at the photo's size */
+  stroke-opacity: 0.6;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  animation: mesh-draw 1.1s var(--ease-out) 0.8s both;
+}
+
+.hero__mesh circle {
+  fill: var(--class-vision);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes mesh-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
 }
 
 @keyframes point-in {
   from { opacity: 0; transform: scale(0.5); }
   to { opacity: 1; transform: scale(1); }
+}
+
+/* Scan loop: a line sweeps down the face box every --scan, and each landmark
+   blips as the line reaches it (its delay is its --t position in the box). */
+.hero__frame {
+  --scan: 3.2s;
+  --scan-start: 1.2s;
+}
+
+.hero__face::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: var(--c);
+  opacity: 0;
+  animation: scan-line var(--scan) linear var(--scan-start) infinite;
+}
+
+.hero__mesh circle {
+  animation:
+    point-in 0.3s var(--ease-out) 1.2s both,
+    point-blip var(--scan) linear calc(var(--scan-start) + var(--t) * var(--scan) * 0.7) infinite;
+}
+
+/* The sweep takes the first 70% of the loop, then the line fades and rests */
+@keyframes scan-line {
+  0% { top: 0; opacity: 0; }
+  5% { opacity: 0.9; }
+  70% { top: 100%; opacity: 0.9; }
+  78%, 100% { top: 100%; opacity: 0; }
+}
+
+@keyframes point-blip {
+  0% { transform: scale(1.6); background: var(--ink); }
+  12%, 100% { transform: scale(1); background: var(--class-vision); }
 }
 
 .hero__caption {
@@ -885,6 +942,26 @@ button {
   border-top: 1px solid var(--line);
 }
 
+/* Rows slide in as they scroll into view. Scroll-driven, so browsers without
+   support (and reduced-motion users) just show the rows as they are. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .timeline__item,
+    .experience__cert {
+      animation: row-in linear both;
+      animation-timeline: view();
+      animation-range: entry 10% entry 60%;
+    }
+  }
+}
+
+@keyframes row-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
 .timeline__when {
   color: var(--muted);
   font-family: var(--font-mono);
@@ -1179,8 +1256,12 @@ button {
 
   .anno::before,
   .anno__tag,
-  .hero__point {
+  .hero__mesh * {
     animation: none;
+  }
+
+  .hero__face::after {
+    display: none;
   }
 
   .section__title::before,
