@@ -48,7 +48,7 @@ export default function Home() {
 
         <p className="hero__lede">
           I'm Omar Haouache, a software engineer. I train computer vision models and ship them inside
-          web apps, SaaS platforms and distributed systems built with Django, React and WebSockets.
+          web apps, SaaS platforms and distributed systems.
         </p>
 
         <ul className="legend" aria-label="What I work on">

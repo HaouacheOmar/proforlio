@@ -1,3 +1,10 @@
+import { useRef } from "react";
+import { motion, useScroll } from "motion/react";
+
+// Where the fill tip sits in the viewport: the rail fills up to this line and
+// each node lights as it crosses it, so the two stay in sync
+const TIP = 65;
+
 const TIMELINE = [
   {
     when: "2024 – 2025",
@@ -29,7 +36,23 @@ const TIMELINE = [
   },
 ];
 
+// A ring on the rail that lights up when the fill reaches it
+function Node() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: [`start ${TIP + 2}%`, `start ${TIP - 2}%`] });
+
+  return (
+    <span className="timeline__node" ref={ref} aria-hidden="true">
+      <motion.span className="timeline__node-lit" style={{ opacity: scrollYProgress }} />
+      <motion.span className="timeline__node-dot" style={{ scale: scrollYProgress }} />
+    </span>
+  );
+}
+
 export default function Experience() {
+  const listRef = useRef(null);
+  const { scrollYProgress: progress } = useScroll({ target: listRef, offset: [`start ${TIP}%`, `end ${TIP}%`] });
+
   return (
     <section className="experience section container" id="experience">
       <div className="section__head">
@@ -40,21 +63,28 @@ export default function Experience() {
         </p>
       </div>
 
-      <ol className="timeline">
-        {TIMELINE.map(({ when, what, where, text, tag }) => (
-          <li className="timeline__item" key={what}>
-            <span className="timeline__when">{when}</span>
-            <div className="timeline__body">
-              <h3 className="timeline__what">{what}</h3>
-              <p className="timeline__where">
-                {where}
-                {tag && <span className={`tag tag--${tag}`}>{tag}</span>}
-              </p>
-              {text && <p className="timeline__text">{text}</p>}
-            </div>
-          </li>
-        ))}
-      </ol>
+      <div className="timeline" ref={listRef}>
+        <div className="timeline__rail" aria-hidden="true">
+          <motion.div className="timeline__fill" style={{ scaleY: progress }} />
+        </div>
+
+        <ol className="timeline__list">
+          {TIMELINE.map(({ when, what, where, text, tag }) => (
+            <li className="timeline__item" key={what}>
+              <Node />
+              <span className="timeline__when">{when}</span>
+              <div className="timeline__body">
+                <h3 className="timeline__what">{what}</h3>
+                <p className="timeline__where">
+                  {where}
+                  {tag && <span className={`tag tag--${tag}`}>{tag}</span>}
+                </p>
+                {text && <p className="timeline__text">{text}</p>}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
 
       <p className="experience__cert">
         <i className="bx bx-certification" aria-hidden="true"></i>

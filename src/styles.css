@@ -932,10 +932,62 @@ button {
 
 /* ==================== EXPERIENCE ==================== */
 .timeline {
+  --rail-x: 0.6rem; /* centre of the rail from the left edge */
+  --node: 14px;
+  position: relative;
+}
+
+.timeline__list {
+  padding-left: 2.75rem;
   border-bottom: 1px solid var(--line);
 }
 
+/* Scroll progress rail: a 2px track that fills top to bottom as the list
+   scrolls past (scaleY driven by motion's useScroll in Experience.jsx) */
+.timeline__rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--rail-x) - var(--stroke) / 2);
+  width: var(--stroke);
+  background: var(--line);
+}
+
+.timeline__fill {
+  height: 100%;
+  background: var(--primary);
+  transform-origin: top;
+}
+
+.timeline__node {
+  position: absolute;
+  top: calc(1.6rem + 0.3rem);
+  left: calc(var(--rail-x) - 2.75rem - var(--node) / 2);
+  display: grid;
+  place-items: center;
+  width: var(--node);
+  height: var(--node);
+  border: var(--stroke) solid var(--line);
+  border-radius: 50%;
+  background: var(--ground);
+}
+
+.timeline__node-lit {
+  position: absolute;
+  inset: calc(var(--stroke) * -1);
+  border: var(--stroke) solid var(--primary);
+  border-radius: 50%;
+}
+
+.timeline__node-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
 .timeline__item {
+  position: relative;
   display: grid;
   gap: 0.35rem 2rem;
   padding-block: 1.6rem;
