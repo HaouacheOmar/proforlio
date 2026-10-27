@@ -1089,13 +1089,21 @@ button {
   font-weight: 750;
 }
 
+.skills__title,
+.skills__title .tag {
+  transform-origin: top; /* unfolds with the items, see Skills.jsx */
+}
+
 .skills__items {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 
 .skills__items li {
+  transform-origin: top; /* unfolds from its top edge, see Skills.jsx */
   padding: 0.35rem 0.75rem;
   border: 1px solid var(--line);
   border-radius: 8px;
