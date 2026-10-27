@@ -159,7 +159,7 @@ export default [
     classes: ["web_app"],
     image: "",
     flow: ["Vue.js · TypeScript", "Django REST", "auth · categories · events"],
-    demo: "",
+    demo: "https://agendaops.pages.dev",
     github: "https://github.com/HaouacheOmar/agenda",
     description: "A calendar and events manager. Users sign in, create events and organise them by category.",
     features: [
