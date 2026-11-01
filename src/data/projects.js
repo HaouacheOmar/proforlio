@@ -75,18 +75,21 @@ export default [
   {
     title: "RESTO",
     category: "sidework",
-    classes: ["web_app", "real_time", "distributed"],
+    classes: ["web_app", "vision", "real_time", "distributed"],
     image: "/assets/img/Resto.png",
     demo: "https://resto-ruby-nine.vercel.app",
     github: "https://github.com/HaouacheOmar/RESTO",
-    description: "A distributed restaurant management system: nine roles work on the same live state.",
+    description:
+      "A distributed restaurant management system: nine roles work on the same live state, and a camera worker counts the guests at each table.",
     features: [
       "Client, reservation desk, parking attendant, waiter, cashier, chef, driver, stock keeper and manager each get their own space.",
       "A booking updates the parking, front desk, floor plan and till instantly over WebSockets authenticated with JWT.",
+      { label: "Table monitoring", text: "YOLO26 pose and DeepSORT tracking count the guests seated at each table zone, with smoothing so a table turns occupied or free only after a delay." },
+      { label: "Privacy", text: "everyone in the video is blurred; the worker sends only counts to the API and serves a blurred MJPEG stream to the manager and reservation desk." },
       "Business rules enforced in PostgreSQL with constraints and row locks; OpenAPI docs.",
       "GitHub Actions CI runs tests, schema validation and Docker builds.",
     ],
-    tags: ["Django", "REST Framework", "Channels", "Redis", "PostgreSQL", "React", "TypeScript"],
+    tags: ["Django", "REST Framework", "Channels", "Redis", "PostgreSQL", "React", "TypeScript", "YOLO", "DeepSORT", "OpenCV"],
   },
   {
     title: "E-Shop",
@@ -182,5 +185,25 @@ export default [
       "Bachelor's internship at the Organisme des Œuvres Sociales: a desktop application for managing welfare files and their follow-up, modelled with UML and MERISE.",
     features: [],
     tags: [],
+  },
+  {
+    title: "Store Management",
+    category: "sidework",
+    classes: ["web_app", "real_time", "distributed"],
+    image: "",
+    flow: ["Angular · Cloudflare Pages", "Spring Cloud Gateway · JWT", "5 Spring Boot services · Kafka", "one PostgreSQL per service"],
+    demo: "https://store-management-7vs.pages.dev",
+    github: "https://github.com/HaouacheOmar/store_management",
+    description:
+      "A multi-tenant SaaS for running a shop: sign up and your store is ready, with a cash till that prints 80 mm receipts, stock that warns you before it runs out, suppliers, dated discounts and a revenue dashboard.",
+    features: [
+      { label: "Microservices", text: "five Spring Boot services (auth, catalog, suppliers, sales, reporting) behind Spring Cloud Gateway, each with its own PostgreSQL database and Flyway migrations." },
+      { label: "Consistency", text: "stock reserved atomically at checkout and released on failure; a transactional outbox publishes sales to Kafka, idempotent consumers build the reports." },
+      { label: "Real time", text: "low-stock alerts pushed over STOMP WebSockets, JWT-checked at connect and scoped to the store." },
+      { label: "Access", text: "admin, manager and cashier roles plus fine-grained permissions; a cashier only sees their own takings." },
+      { label: "Quality", text: "integration tests on real PostgreSQL and Kafka with Testcontainers." },
+      { label: "Delivery", text: "Docker Compose locally; Cloudflare Pages + Render + Neon Postgres + Aiven Kafka in production." },
+    ],
+    tags: ["Java", "Spring Boot", "Spring Cloud", "Hibernate", "Kafka", "PostgreSQL", "Angular", "Docker"],
   },
 ];

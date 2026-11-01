@@ -47,7 +47,7 @@ export default function Header() {
   return (
     <header className={`header${scrolled ? " header--scrolled" : ""}`}>
       <nav className="nav container" aria-label="Main">
-        <a href="#home" className="nav__logo">Omar Haouache</a>
+        <a href="#home" className="nav__logo">Haouache Omar</a>
 
         <ul className="nav__list">
           {NAV.map(({ id, label }) => (

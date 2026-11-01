@@ -9,21 +9,21 @@ export default [
   {
     title: "Backend & distributed systems",
     class: "distributed",
-    skills: ["Python", "Django", "Django REST Framework", "Django Channels", "FastAPI", "Flask", "Node.js", "Java / Spring Boot", "Celery", "gRPC", "REST", "SOAP", "Microservices"],
+    skills: ["Python", "Django", "Django REST Framework", "Django Channels", "FastAPI", "Flask", "Node.js", "Java / Spring Boot", "Spring Cloud", "Hibernate / JPA", "Celery", "gRPC", "REST", "SOAP", "Microservices"],
   },
   {
     title: "Real time & data",
     class: "real_time",
-    skills: ["WebSockets", "Redis", "PostgreSQL", "MySQL", "SQLite", "JWT", "OpenAPI"],
+    skills: ["WebSockets", "Kafka", "Redis", "PostgreSQL", "MySQL", "SQLite", "JWT", "OpenAPI"],
   },
   {
     title: "Web apps",
     class: "web_app",
-    skills: ["React", "Next.js", "Vue.js", "TypeScript", "JavaScript", "Redux Toolkit", "Tailwind CSS", "Material UI", "HTML / CSS"],
+    skills: ["React", "Next.js", "Vue.js", "Angular", "TypeScript", "JavaScript", "Redux Toolkit", "Tailwind CSS", "Material UI", "HTML / CSS"],
   },
   {
     title: "Delivery & design",
     class: "",
-    skills: ["Docker", "Docker Compose", "nginx", "GitHub Actions", "Git", "pytest", "Playwright", "Vercel", "Render", "UML", "MERISE"],
+    skills: ["Docker", "Docker Compose", "nginx", "GitHub Actions", "Git", "pytest", "Playwright", "Testcontainers", "Vercel", "Render", "Cloudflare Pages", "UML", "MERISE"],
   },
 ];

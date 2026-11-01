@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__container container">
-        <p className="footer__name">Omar Haouache</p>
+        <p className="footer__name">Haouache Omar</p>
         <ul className="footer__links">
           {LINKS.map(({ href, label, external, download }) => (
             <li key={label}>
