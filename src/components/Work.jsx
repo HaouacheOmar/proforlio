@@ -16,7 +16,7 @@ export default function Work() {
       <div className="section__head">
         <h2 className="section__title">Selected work</h2>
         <p className="section__lede">
-          Ten projects, each tagged with what it is. Pick a class to filter.
+          {framed.length} projects, each tagged with what it is. Pick a class to filter.
         </p>
       </div>
 
